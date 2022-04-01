@@ -1,11 +1,9 @@
-FROM ruby:2.7.0
+FROM node:16
 
-ENV LC_ALL=C.UTF-8
+RUN mkdir /app
 WORKDIR /app
 
-COPY Gemfile* ./
-RUN bundle install
+COPY package.json /app/
+COPY package-lock.json /app/
 
-CMD bundle exec \
-  rerun --pattern _config.yml -- \
-  jekyll serve --host 0.0.0.0 --incremental --livereload
+RUN npm ci

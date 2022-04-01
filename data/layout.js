@@ -1,0 +1,1 @@
+module.exports = "handbook_page"

@@ -45,7 +45,7 @@ templates](https://github.com/18F/handbook/tree/main/_templates). If the type of
 content you're creating -- for example, if you're documenting a new tool -- has
 a template, then please use it to write your new page.
 {% endcapture %}
-{% include alert.html heading="Creating a new page?" content=alert_content %}
+{% include "alert.html", heading:"Creating a new page?" content:alert_content %}
 
 Now, assuming you've identified what you want to contribute -- if you haven't, check out the Handbook's [open issues](https://github.com/18F/handbook/issues) -- let's talk about the mechanism by which you'll contribute: NetlifyCMS or Git.
 

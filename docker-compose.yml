@@ -1,10 +1,18 @@
-version: "3"
+version: "3.2"
+
 services:
-  web:
+  site:
     build: .
-    tty: true
-    ports:
-      - "4000:4000"
-      - "35729:35729" # for livereload
+    image: me/site
     volumes:
       - .:/app
+    command: "npm run serve"
+    ports:
+      - 8080:8080
+  
+  sass:
+    build: .
+    image: me/site
+    volumes:
+      - .:/app
+    command: "npm run sass-watch"
