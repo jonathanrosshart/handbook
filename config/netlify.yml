@@ -10,7 +10,7 @@
 
 backend:
   name: github
-  repo: 18f/handbook
+  repo: jonathanrosshart/handbook
   base_url: https://pages.cloud.gov
   auth_endpoint: external/auth/github
   preview_context: pages/build
